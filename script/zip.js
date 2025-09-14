@@ -4,8 +4,8 @@ const fs = require('fs')
 const version = process.env.npm_package_version
 
 // Windows
-let exePath = path.resolve(__dirname, `../dist/Pinokio Setup ${version}.exe`)
-let zipPath = path.resolve(__dirname, `../dist/Pinokio-${version}-win32.zip`)
+let exePath = path.resolve(__dirname, `../dist-win32/SpeedyHawke-UI.exe`)
+let zipPath = path.resolve(__dirname, `../dist-win32/SpeedyHawke-UI-win32-${version}.zip`)
 exec(`zip -j "${zipPath}" "${exePath}"`, (error, stdout, stderr) => {
   if (error) {
     console.error(`Error executing command: ${error}`);
